@@ -3,7 +3,7 @@ import { Modal, IconButton, Box, Fade, Backdrop, Zoom, Typography } from "@mui/m
 import CloseIcon from "@mui/icons-material/Close"
 import FullscreenIcon from "@mui/icons-material/Fullscreen"
 
-const Certificate = ({ ImgSertif }) => {
+const Certificate = ({ image }) => {
 	const [open, setOpen] = useState(false)
 
 	const handleOpen = () => {
@@ -57,7 +57,7 @@ const Certificate = ({ ImgSertif }) => {
 					}}>
 					<img
 						className="certificate-image"
-						src={ImgSertif}
+						src={image}
 						alt="Certificate"
 						style={{
 							width: "100%",
@@ -178,7 +178,7 @@ const Certificate = ({ ImgSertif }) => {
 
 					{/* Modal Image */}
 					<img
-						src={ImgSertif}
+						src={image}
 						alt="Certificate Full View"
 						style={{
 							display: "block",

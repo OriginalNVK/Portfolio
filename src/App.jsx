@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 import { StarBackground } from "./components/StarBackground";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Showcase from "./pages/Showcase";
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
         {/* Nội dung chính của trang */}
         <Home />
         <About />
+        <Showcase />
         <footer>
           <center>
             <hr className="my-3 border-gray-400 opacity-15 sm:mx-auto lg:my-6 text-center" />
