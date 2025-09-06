@@ -11,14 +11,15 @@ const CardProject = ({ id, name, description, image, github, live }) => {
       alert("Live demo link is not available");
     }
   };
-  
-  const handleDetails = (e) => {
-    if (!id) {
-      console.log("ID kosong");
+
+  const handleSourceCode = (e) =>
+  {
+    if (!github)
+    {
       e.preventDefault();
-      alert("Project details are not available");
+      alert("Source code link is not available");
     }
-  };
+  }
   
 
   return (
@@ -31,7 +32,7 @@ const CardProject = ({ id, name, description, image, github, live }) => {
             <img
               src={image}
               alt={name}
-              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-[200px] object-cover transform group-hover:scale-105 transition-transform duration-500"
             />
           </div>
 
@@ -67,7 +68,7 @@ const CardProject = ({ id, name, description, image, github, live }) => {
                   href={github || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={handleLiveDemo}
+                  onClick={handleSourceCode}
                   className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-200"
                 >
                   <span className="text-sm font-medium">Source Code</span>

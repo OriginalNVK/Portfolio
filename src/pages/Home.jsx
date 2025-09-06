@@ -94,7 +94,7 @@ const SocialLink = memo(({ icon: Icon, link }) => (
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
-const WORDS = ["HCMUS Student", "Tech Enthusiast"];
+const WORDS = [".NET FullStack Developer", "Prompt Engineer", "Web Designer", "Project Manager"];
 const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/OriginalNVK" },
   { icon: Linkedin, link: "www.linkedin.com/in/original-nvk" },
@@ -180,7 +180,7 @@ const Home = () => {
           isLoaded ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="container mx-auto px-[5%] sm:px-6 lg:px-[0%] min-h-screen">
+        <div className="container mx-auto px-[5%] sm:px-6 lg:px-[5%] min-h-screen">
           <div className="flex flex-col lg:flex-row items-center justify-center h-screen md:justify-between gap-0 sm:gap-12 lg:gap-20">
             {/* Left Column */}
             <div
@@ -210,7 +210,7 @@ const Home = () => {
                   data-aos="fade-up"
                   data-aos-delay="1000"
                 >
-                  .NET fullstack developer | Prompt Engineer | Web Designer | Project Manager
+                  A 21 years old son from Dak Lak with a strong passion for technology
                 </p>
 
                 {/* CTA Buttons */}

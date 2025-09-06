@@ -108,18 +108,27 @@ function a11yProps(index) {
 }
 
 const techStacks = [
-  { icon: "html.svg", language: "HTML" },
-  { icon: "css.svg", language: "CSS" },
-  { icon: "javascript.svg", language: "JavaScript" },
-  { icon: "tailwind.svg", language: "Tailwind CSS" },
-  { icon: "reactjs.svg", language: "ReactJS" },
-  { icon: "vite.svg", language: "Vite" },
-  { icon: "nodejs.svg", language: "Node JS" },
-  { icon: "bootstrap.svg", language: "Bootstrap" },
-  { icon: "firebase.svg", language: "Firebase" },
-  { icon: "MUI.svg", language: "Material UI" },
-  { icon: "vercel.svg", language: "Vercel" },
-  { icon: "SweetAlert.svg", language: "SweetAlert2" },
+  { icon: "./../../public/tech_img/CSharp.svg", language: "C#" },
+  { icon: "./../../public/tech_img/C++.svg", language: "C++" },
+  { icon: "./../../public/tech_img/python.svg", language: "Python" },
+  { icon: "./../../public/tech_img/javascript.svg", language: "JavaScript" },
+  { icon: "./../../public/tech_img/html.svg", language: "HTML" },
+  { icon: "./../../public/tech_img/css.svg", language: "CSS" },
+  { icon: "./../../public/tech_img/NET.svg", language: ".NET" },
+  { icon: "./../../public/tech_img/NET_core.svg", language: ".NET Core" },
+  { icon: "./../../public/tech_img/nodejs.svg", language: "Node JS" },
+  {
+    icon: "./../../public/tech_img/Microsoft_SQL_Server.svg",
+    language: "SQL Server",
+  },
+  { icon: "./../../public/tech_img/oracle.svg", language: "Oracle DB" },
+  { icon: "./../../public/tech_img/mongodb.svg", language: "MongoDB" },
+  { icon: "./../../public/tech_img/reactjs.svg", language: "ReactJS" },
+  { icon: "./../../public/tech_img/tailwind.svg", language: "Tailwind CSS" },
+  { icon: "./../../public/tech_img/bootstrap.svg", language: "Bootstrap" },
+  { icon: "./../../public/tech_img/Figma.svg", language: "Figma" },
+  { icon: "./../../public/tech_img/docker.svg", language: "Docker" },
+  { icon: "./../../public/tech_img/AWS.svg", language: "AWS" },
 ];
 
 export default function FullWidthTabs() {
@@ -317,7 +326,7 @@ export default function FullWidthTabs() {
                       name={project.name}
                       description={project.description}
                       github={project.github}
-                      link={project.link}
+                      live={project.live}
                       id={project.id}
                     />
                   </div>
