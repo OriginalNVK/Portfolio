@@ -81,7 +81,11 @@ const Navbar = () => {
               onClick={(e) => scrollToSection(e, "#Home")}
               className="text-xl font-bold bg-gradient-to-r from-[#a855f7] to-[#6366f1] bg-clip-text text-transparent"
             >
-              <img src="./../public/logo.png" alt="logo" className="h-8 w-8 inline-block mr-2 rounded-full" />
+              <img
+                src="/logo.png"
+                alt="logo"
+                className="h-8 w-8 inline-block mr-2 rounded-full"
+              />
               OriginalNVK
             </a>
           </div>
