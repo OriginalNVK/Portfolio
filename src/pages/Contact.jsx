@@ -116,7 +116,7 @@ const ContactPage = () => {
           <div
             data-aos="fade-right"
             data-aos-duration="1200"
-            className="bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10"
+            className="bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-300 hover:shadow-[#6366f1]/10  opacity-25"
           >
             <div className="flex justify-between items-start mb-8">
               <div>
@@ -209,6 +209,12 @@ const ContactPage = () => {
 
           <div className="bg-white/5 backdrop-blur-xl rounded-3xl p-3 py-3 md:p-10 md:py-8 shadow-2xl transform transition-all duration-300 hover:shadow-[#6366f1]/10">
             <CommentSection />
+          {/* <motion.div
+            variants={slideIn("left", "tween", 0.2, 1)}
+            className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
+          >
+            <EarthCanvas />
+          </motion.div> */}
           </div>
         </div>
       </div>

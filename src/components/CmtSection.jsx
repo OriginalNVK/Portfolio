@@ -30,10 +30,10 @@ const CommentItem = memo(({ comment, formatDate, index }) => (
     data-aos-duration="600"
   >
     <div className="flex items-start gap-3 ">
-      {comment.profileImage ? (
+      {comment.image ? (
         <img
-          src={comment.profileImage}
-          alt={`${comment.userName}'s profile`}
+          src={comment.image}
+          alt={`${comment.name}'s profile`}
           className="w-10 h-10 rounded-full object-cover border-2 border-indigo-500/30"
           loading="lazy"
         />
@@ -45,10 +45,10 @@ const CommentItem = memo(({ comment, formatDate, index }) => (
       <div className="flex-grow min-w-0">
         <div className="flex items-center justify-between gap-4 mb-2">
           <h4 className="font-medium text-white truncate">
-            {comment.userName}
+            {comment.name}
           </h4>
           <span className="text-xs text-gray-400 whitespace-nowrap">
-            {formatDate(comment.createdAt)}
+            {formatDate(comment.date)}
           </span>
         </div>
         <p className="text-gray-300 text-sm break-words leading-relaxed relative bottom-2">
@@ -221,8 +221,8 @@ const CommentSection = () => {
   }, []);
 
   useEffect(() => {
-    const commentsRef = collection(db, "portfolio-comments");
-    const q = query(commentsRef, orderBy("createdAt", "desc"));
+    const commentsRef = collection(db, "comments");
+    const q = query(commentsRef, orderBy("date", "desc"));
 
     return onSnapshot(q, (querySnapshot) => {
       const commentsData = querySnapshot.docs.map((doc) => ({
@@ -250,11 +250,11 @@ const CommentSection = () => {
 
       try {
         const profileImageUrl = await uploadImage(imageFile);
-        await addDoc(collection(db, "portfolio-comments"), {
+        await addDoc(collection(db, "comments"), {
           content: newComment,
-          userName,
-          profileImage: profileImageUrl,
-          createdAt: serverTimestamp(),
+          name,
+          image: profileImageUrl,
+          date: serverTimestamp(),
         });
       } catch (error) {
         setError("Failed to post comment. Please try again.");
